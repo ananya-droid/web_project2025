@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Justice Connection - Consumer Awareness</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav>
+        <div class="container">
+            <img src="images/justice-logo.png" alt="Justice Logo" class="logo">
+            <ul class="nav-links" id="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="know-rights.html">Know Your Rights</a></li>
+                <li><a href="file-complaint.html">File Complaint</a></li>
+                <li><a href="resources.html">Resources</a></li>
+                <li><a href="contact-us.html">Contact Us</a></li>
+            </ul>
+            <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header id="home">
+        <section class="hero container">
+            <div class="hero-text">
+                <h1>Justice for All</h1>
+                <p>Empowering consumers through knowledge and action. Protect your rights, fight fraud, and stand for justice.</p>
+                <button class="btn" onclick="scrollToSection('rights')">Learn More</button>
+            </div>
+            <div class="hero-image">
+                <img src="images/justice-scale.png" alt="Justice Scale" class="floating">
+            </div>
+        </section>
+    </header>
+
+    <!-- Information Section -->
+    <section class="info-section container" id="rights">
+        <div class="info-card">
+            <img src="images/consumer-rights.jpg" alt="Consumer Rights">
+            <h3>Know Your Rights</h3>
+            <p>Understand consumer protection laws and legal safeguards.</p>
+        </div>
+        <div class="info-card">
+            <img src="images/consumer-rights.jpg" alt="File Complaint">
+            <h3>File a Complaint</h3>
+            <p>Learn how to report fraud, scams, and unfair trade practices.</p>
+        </div>
+        <div class="info-card">
+            <img src="images/consumer-rights.jpg" alt="Legal Resources">
+            <h3>Legal Resources</h3>
+            <p>Get access to legal documents, FAQs, and expert advice.</p>
+        </div>
+    </section>
+
+    <!-- Call-to-Action Section -->
+    <section class="cta-section container" id="complaint">
+        <h2>Take Action Now</h2>
+        <p>Protect your consumer rights and report fraudulent activities. Join us in making a difference.</p>
+        <button class="btn" onclick="scrollToSection('contact')">Get Started</button>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact">
+        <div class="container">
+            <p>&copy; 2024 Justice Connection. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

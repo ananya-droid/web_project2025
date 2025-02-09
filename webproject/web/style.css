@@ -1,0 +1,154 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;700&display=swap');
+
+body {
+    font-family: "Raleway", sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f7f9;
+    color: #333;
+    scroll-behavior: smooth;
+}
+
+/* Navigation Bar */
+nav {
+    background: #0a2c4e;  /* Dark blue color matching the image */
+    padding: 15px 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+nav .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.logo {
+    width: 140px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+    padding: 8px 15px;
+    border-radius: 5px;
+    transition: all 0.3s ease-in-out;
+}
+
+.nav-links a:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+/* Hero Section */
+.hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 85vh;
+    padding: 0 10%;
+    background: linear-gradient(180deg, #0a2c4e, #1d3557); /* Matched gradient */
+    color: white;
+}
+
+.hero-text {
+    width: 50%;
+}
+
+.hero-text h1 {
+    font-size: 42px;
+    font-weight: 700;
+}
+
+.hero-text p {
+    font-size: 18px;
+    margin: 20px 0;
+}
+
+.btn {
+    padding: 12px 24px;
+    background: #fca311;
+    border: none;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.btn:hover {
+    background: #ffba49;
+}
+
+.hero-image img {
+    width: 400px;
+}
+
+/* Floating Animation */
+.floating {
+    animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-15px); }
+    100% { transform: translateY(0px); }
+}
+
+/* Information Section */
+.info-section {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    padding: 80px 10%;
+    background: #ffffff; /* White background for better visibility */
+}
+
+.info-card {
+    width: 300px;
+    background: white;
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-in-out;
+}
+
+.info-card img {
+    width: 80px;
+    margin-bottom: 10px;
+}
+
+.info-card h3 {
+    color: #1d3557;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.cta-section {
+    text-align: center;
+    padding: 80px 10%;
+    background: #1d3557;
+    color: white;
+}
+
+/* Footer */
+footer {
+    background: #1d3557;
+    color: white;
+    text-align: center;
+    padding: 15px;
+}

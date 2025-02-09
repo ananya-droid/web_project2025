@@ -1,0 +1,114 @@
+/* General Styling */
+body {
+    font-family: "Raleway", sans-serif;
+    background: linear-gradient(180deg, #457B9D, #1D3557);
+    color: white;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+/* Header */
+header {
+    background: rgba(29, 53, 87, 0.95);
+    padding: 15px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 100;
+}
+
+.site-title {
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    font-weight: 600;
+    padding: 10px;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+/* Hero Section */
+.hero {
+    padding: 100px 10%;
+    height: 40vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* Flashcard Section */
+.flashcards-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 40px 10%;
+}
+
+/* Flashcard Style */
+.flashcard {
+    width: 200px;
+    height: 250px;
+    perspective: 1000px;
+}
+
+.flashcard-inner {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 0.6s;
+}
+
+.flashcard:hover .flashcard-inner {
+    transform: rotateY(180deg);
+}
+
+/* Flashcard Front & Back */
+.flashcard-front,
+.flashcard-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    font-size: 18px;
+    padding: 15px;
+}
+
+/* Front Side */
+.flashcard-front {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+/* Back Side */
+.flashcard-back {
+    background: rgba(255, 255, 255, 0.3);
+    transform: rotateY(180deg);
+}
+
+/* Footer */
+footer {
+    background: rgba(29, 53, 87, 0.9);
+    padding: 15px;
+}

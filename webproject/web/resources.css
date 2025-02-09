@@ -1,0 +1,87 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to right, #f0f9ff, #ffffff);
+}
+
+header {
+    background-color: #004466;
+    color: white;
+    padding: 15px;
+    text-align: center;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+nav ul li a.active {
+    text-decoration: underline;
+}
+
+.resources-container {
+    width: 80%;
+    margin: 30px auto;
+    text-align: center;
+}
+
+.resource-card {
+    background-color: white;
+    padding: 15px;
+    margin: 15px 0;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    position: relative;
+}
+
+.resource-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.resource-summary {
+    font-size: 16px;
+    color: #333;
+}
+
+.resource-details {
+    display: none;
+    padding-top: 10px;
+    font-size: 14px;
+    color: #333;
+    text-align: left;
+}
+
+.resource-details ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.resource-details li {
+    margin: 5px 0;
+}
+
+.resource-details a {
+    color: #0077cc;
+    text-decoration: none;
+}
+
+.resource-details a:hover {
+    text-decoration: underline;
+}

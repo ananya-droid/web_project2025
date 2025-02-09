@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PeaceConnect - File a Complaint</title>
+    <link rel="stylesheet" href="file-complaint.css">
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="logo">PeaceConnect</div>
+        <div class="menu-toggle" onclick="toggleMenu()">&#9776;</div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="rights.html">Know Your Rights</a></li>
+            <li><a href="file-complaint.html" class="active">File Complaint</a></li>
+            <li><a href="resources.html">Resources</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+    </nav>
+
+    <!-- Complaint Form Section -->
+    <div class="container">
+        <div class="form-container">
+            <h2>File a Complaint</h2>
+            <p>Report any issues or conflicts, and let us help you find a resolution.</p>
+            
+            <form id="complaintForm">
+                <div class="input-group">
+                    <label for="fname">First Name</label>
+                    <input type="text" id="fname" name="fname" placeholder="Enter your first name" required>
+                </div>
+
+                <div class="input-group">
+                    <label for="lname">Last Name</label>
+                    <input type="text" id="lname" name="lname" placeholder="Enter your last name" required>
+                </div>
+
+                <div class="input-group">
+                    <label for="phone">Phone Number</label>
+                    <input type="text" id="phone" name="phone" placeholder="Enter your phone number" required>
+                </div>
+
+                <div class="input-group">
+                    <label for="area">Select Your Area</label>
+                    <select id="area" name="area">
+                        <option value="">Select an area</option>
+                        <option value="I.J Colony">I.J Colony</option>
+                        <option value="Defence Colony">Defence Colony</option>
+                        <option value="Dinga">Dinga</option>
+                        <option value="Gazi Colony">Gazi Colony</option>
+                        <option value="Naseera">Naseera</option>
+                        <option value="Tanveer Town">Tanveer Town</option>
+                    </select>
+                </div>
+
+                <div class="input-group">
+                    <label>Category of Complaint</label>
+                    <div class="checkbox-group">
+                        <label><input type="checkbox" name="category" value="Sports"> Sports</label>
+                        <label><input type="checkbox" name="category" value="Business"> Business</label>
+                        <label><input type="checkbox" name="category" value="Health"> Health</label>
+                    </div>
+                </div>
+
+                <div class="input-group">
+                    <label for="complaintDetails">Complaint Details</label>
+                    <textarea id="complaintDetails" name="complaintDetails" placeholder="Describe your complaint..." required></textarea>
+                </div>
+
+                <button type="submit" class="btn-submit">Submit Complaint</button>
+            </form>
+
+            <p id="success-message" class="hidden">Complaint submitted successfully!</p>
+        </div>
+    </div>
+
+    <!-- JavaScript for Form Validation -->
+    <script>
+        function toggleMenu() {
+            document.querySelector('.nav-links').classList.toggle('active');
+        }
+
+        document.getElementById('complaintForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            const firstName = document.getElementById('fname').value.trim();
+            const lastName = document.getElementById('lname').value.trim();
+            const complaintDetails = document.getElementById('complaintDetails').value.trim();
+
+            if (!firstName || !lastName || !complaintDetails) {
+                alert("Please fill in all required fields.");
+                return;
+            }
+
+            document.getElementById('success-message').classList.remove('hidden');
+            setTimeout(() => document.getElementById('success-message').classList.add('hidden'), 3000);
+            this.reset();
+        });
+    </script>
+
+</body>
+</html>
